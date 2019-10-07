@@ -5,8 +5,15 @@ class Calc extends CI_Controller {
 
 	public function index()
 	{
-    echo '<html><head></head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    echo '<html><head>
+		<style>
+			.table td {
+   		text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		</head>
     </head><body>';
     //Modell für ZINSUMRECHNUNG
     $this->load->model('Model');
@@ -28,7 +35,6 @@ class Calc extends CI_Controller {
     echo "<br>  Der Jährliche Zinssatz entspricht: ". $this->Model->formatProzent($zinssatzGanzeZahl);
     echo "<br>  Geteilt durch 100 ist ". $this->Model->formatProzent($zinssatzProzentPA);
     echo "<br>  Ein Monatlicher Zinssatz (Geteilt durch 12) ist ". $this->Model->formatProzent($zinssatzProMonat) . '<br></h6>';
-
 
     //Tabellenerstellung:
     echo '<table class="table">';
