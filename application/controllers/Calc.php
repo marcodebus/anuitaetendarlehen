@@ -35,7 +35,7 @@ class Calc extends CI_Controller {
     echo "<br>  Der Jährliche Zinssatz entspricht: ". $this->Model->formatProzent($zinssatzGanzeZahl);
     echo "<br>  Geteilt durch 100 ist ". $this->Model->formatProzent($zinssatzProzentPA);
     echo "<br>  Ein Monatlicher Zinssatz (Geteilt durch 12) ist ". $this->Model->formatProzent($zinssatzProMonat) . '<br></h6>';
-		echo "<br>  Der Gesamtbetrag setzt sich aus  ". $this->Model->formatProzent($darlehensbetrag) . 'und Agio in Höhe von '.$agio. 'zusammen<br></h6>';
+		echo "<br>  Der Gesamtbetrag setzt sich aus  ". $this->Model->format($darlehensbetrag) . ' und Agio in Höhe von '.$this->Model->format($agio). 'zusammen<br></h6>';
 
     //Tabellenerstellung:
     echo '<table class="table">';
