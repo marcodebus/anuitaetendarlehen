@@ -56,7 +56,7 @@ class Calc extends CI_Controller {
             echo '<td>'.$this->Model->format($restschuld).'</td>';
             $j = true;
           }else{
-              echo "<td>".$this->Model->format($tilgung - $zinsen)."</td>";
+              echo "<td>".$this->Model->format($tilgung)."</td>";
 
           }
       echo "</tr>";
@@ -66,7 +66,6 @@ class Calc extends CI_Controller {
 
     echo '</table></body></html>';
 	}
-
 
 
 
